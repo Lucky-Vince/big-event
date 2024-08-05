@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.108.95.75:3306/big_event
+    username: root
+    password: 123
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰命名和下划线命名的自动转换
+
+
+logging:
+  level:
+    org.mybatis: DEBUG

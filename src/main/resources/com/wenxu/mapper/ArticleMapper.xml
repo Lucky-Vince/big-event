@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wenxu.mapper.ArticleMapper">
+    <select id="list" resultType="com.wenxu.pojo.Article">
+        SELECT * FROM article
+        <where>
+            <if test="categoryId!=null">
+                category_id=#{categoryId}
+            </if>
+            <if test="state!=null">
+                AND state=#{state}
+            </if>
+            AND create_user=#{userId}
+        </where>
+    </select>
+</mapper>
